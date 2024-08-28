@@ -44,13 +44,33 @@
 // export default App;
 
 
+// import React from 'react';
+// import AboutUs from './AboutUs';
+
+// function App() {
+//   return (
+//   <AboutUs/>
+//   )
+// }
+
+// export default App;
+
+
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutUs from './AboutUs';
+// import About from './About';
 
-function App() {
+const App = () => {
   return (
-    <AboutUs/>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<AboutUs />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        {/* Add more routes as needed */}
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
